@@ -1,0 +1,6 @@
+baseURL = "https://grepscraft.com"
+languageCode = "en-us"
+title = "Grepscraft"
+
+[permalinks]
+  blog = "/blog/:filename/"
