@@ -14,3 +14,5 @@ to gold-making, greatly reducing the middle class whilst greatly increasing the
 lower and upper class.
 
 ## What's Changing?
+
+> "This isn't just a UI reskin"
