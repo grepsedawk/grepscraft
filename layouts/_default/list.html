@@ -5,7 +5,7 @@
     {{ range .Paginator.Pages.ByPublishDate.Reverse }}
     <div>
       <h3>
-        <a href="{{.Permalink}}">{{.Title}}</a>
+        <a href="{{.RelPermalink}}">{{.Title}}</a>
       </h3>
       <p>{{ .Description }}</p>
     </div>
