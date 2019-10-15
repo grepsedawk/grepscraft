@@ -48,3 +48,16 @@ In the new system, this would simply be listed at "a quantity of 4,000". The new
 auction house removed stacks. When you want to buy, you simply enter the quantity
 you want to buy, the auction house _automatically_ selects the cheapest auctions
 and then you see a grand total to choose to purchase the selected items.
+
+### Mailbox
+
+Items that are the same, and the same price that were bought or expired at the same time will now be grouped together.
+
+This will save a huge amount of time when it comes to mailboxes for people that
+list a lot of the same materials!
+
+### Favorites
+
+With the addition of favorites, you can now instantly scan for the lowest
+priced auctions in 1 WoW API call. This means that to scan my previous materials scan on
+[US Illidan](https://realmpop.com/us-illidan.html)
