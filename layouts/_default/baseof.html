@@ -8,20 +8,47 @@
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+    <style>
+    body { max-width: 800px; margin: auto; padding: 2em 1em; font-family: sans-serif; }
+    pre { padding: 1em; max-width: 100%; overflow-x: auto; }
+    img { max-width: 100%; }
+    ul.pagination { list-style: none; }
+    ul.pagination li { display: inline; }
+    ul.pagination li a { padding: 2em; }
+    input[type=email], textarea { width: 100%; padding: 1em; }
+    </style>
   </head>
   <body>
     <nav>
       <h3>
-        <a href=/>Grepscraft</a>
+        <a href=/>{{ .Site.Title }}</a>
       </h3>
+      <a href=/post/>Blog</a>
     </nav>
     {{ block "main" . }}
     <main>
       <h1>
         {{ .Params.Title }}
       </h1>
+      {{ with .Resources.ByType "image" }}{{ range first 1 . }}
+      {{ $img := .Resize "750x" }}
+      <img src="{{ $img.RelPermalink }}" alt="{{ $.Params.Title }}" />
+      {{ end }}{{ end }}
       {{ .Content }}
     </main>
     {{ end }}
+    <footer>
+      <hr>
+      <h2>I'm for hire, Contact Me!</h2>
+      <form name=footer-contact netlify>
+        <div>
+          <label>Email: <input name=email type=email required=true /></label>
+        </div>
+        <label>Message: <textarea name=message required=true rows=5></textarea></label>
+        <input name=ref type=hidden value="{{.Permalink}}" />
+        <input type=submit />
+      </form>
+    </footer>
+    <link href="{{"css/syntax.css" | relURL}}" rel="stylesheet">
   </body>
 </html>

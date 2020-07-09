@@ -1,0 +1,24 @@
+baseURL: https://grepscraft.com
+languageCode: en-us
+title: "Grepscraft"
+enableGitInfo: true
+pygmentsCodefences: true
+
+params:
+  defaultMetaDescription: Professional World of Warcraft Addon Development
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+related:
+  threshold: 1 # Always show articles, prioritize by indices
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: categories
+    weight: 20
+  - name: tags
+    weight: 100
+
